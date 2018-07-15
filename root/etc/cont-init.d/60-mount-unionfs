@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+
+# If we are debugging, enable trace
+if [ "${DEBUG,,}" = "true" ]; then
+  set -x
+fi
+
+echo "***********************"
+echo "[mount] unionfs-fuse => /unionfs"
+. /tools/mount-unionfs.sh
